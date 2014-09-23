@@ -1,0 +1,14 @@
+<h1>10 Latest</h1>
+
+
+<% @restaurants.each do |restaurant| %>
+<div>
+  <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+  <p><h3>Description:</h3> <%= restaurant.description %></p>
+  <h3>Location:</h3>
+    <%= restaurant.address %>,
+    <%= restaurant.city %>,
+    <%= restaurant.state %>,
+    <%= restaurant.zip_code %>
+</div>
+<% end %>
